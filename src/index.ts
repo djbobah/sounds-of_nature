@@ -23,9 +23,7 @@ export const soundClick = (sound: string, backgroundImage: string) => {
       isSoundPlaying = true;
     }
   } else {
-    if (currentAudio) {
-      currentAudio.pause();
-    }
+    currentAudio?.pause();
     currentAudio = new Audio(`assets/sounds/${sound}`);
     currentAudio.play();
     isSoundPlaying = true;
